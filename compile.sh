@@ -1,20 +1,23 @@
 #!/bin/bash
 
 function compileAll() {
-./java_compile_jar.sh com/aggregation/TestAnimal.java
-./java_compile_jar.sh com/polymorphism/compiletime/CompileTimePolymorphism.java
-./java_compile_jar.sh com/polymorphism/runtime/RuntimePolymorphism.java
+    compileAggregation
+    compileCompiletime
+    compileRuntime
 }
 
 function compileAggregation() {
+    rm com/aggregation/*.class
     ./java_compile_jar.sh com/aggregation/TestAnimal.java
 }
 
 function compileCompiletime() {
+    rm com/polymorphism/compiletime/*.class
     ./java_compile_jar.sh com/polymorphism/compiletime/CompileTimePolymorphism.java
 }
 
 function compileRuntime() {
+    rm com/polymorphism/runtime/*.class
     ./java_compile_jar.sh com/polymorphism/compiletime/CompileTimePolymorphism.java
 }
 
@@ -68,4 +71,5 @@ while test $# -gt 0; do
                         ;;
         esac
 done
+
 
