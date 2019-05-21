@@ -7,18 +7,35 @@ function compileAll() {
 }
 
 function compileAggregation() {
-    rm com/aggregation/*.class
+    echo ""
+    echo "[ --- Compiling Aggregation --- ]"
+    echo ""
+    rm -rf com/aggregation/*.class
     ./java_compile_jar.sh com/aggregation/TestAnimal.java
+    echo ""
+    echo "[ --- END Aggregation --- ]"
+    echo ""
 }
 
 function compileCompiletime() {
-    rm com/polymorphism/compiletime/*.class
+    echo "[ --- Compiling Compiletime --- ]"
+    echo ""
+    rm -rf com/polymorphism/compiletime/*.class
     ./java_compile_jar.sh com/polymorphism/compiletime/CompileTimePolymorphism.java
+    echo ""
+    echo "[ --- END Aggregation --- ]"
+    echo ""
 }
 
 function compileRuntime() {
-    rm com/polymorphism/runtime/*.class
-    ./java_compile_jar.sh com/polymorphism/compiletime/CompileTimePolymorphism.java
+    echo ""
+    echo "[ --- Compiling Runtime --- ]"
+    echo ""
+    rm -rf com/polymorphism/runtime/*.class
+    ./java_compile_jar.sh com/polymorphism/runtime/RuntimePolymorphism.java
+    echo ""
+    echo "[ --- END Runtime --- ]"
+    echo ""
 }
 
 function showHelp() {
@@ -51,21 +68,15 @@ while test $# -gt 0; do
                         showHelp
                         exit 1
                         ;;
-
                 -a|--aggregation)
-                        echo "Compiling Aggregation.."
                         compileAggregation
                         exit 1
                         ;;
-
                 -c|--compiletime)
-                        echo "Compiling Compiletime.."
                         compileCompiletime
                         exit 1
                         ;;
-
                 -r|--runtime)
-                        echo "Compiling Runtime.."
                         compileRuntime
                         exit 1
                         ;;
