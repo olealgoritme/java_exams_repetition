@@ -1,6 +1,6 @@
-package com.lemon;
+package com.aggregation;
 
-import com.lemon.Stable;
+import com.aggregation.Stable;
 
 public abstract class Animal {
 

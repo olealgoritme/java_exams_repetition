@@ -1,4 +1,4 @@
-package com.lemon;
+package com.aggregation;
 
 public class Stable {
 
@@ -40,6 +40,8 @@ public class Stable {
 
     @Override
     public String toString() {
-        return "Location: " + this.location + "\n" + "Box: " + this.box + "\n" + "Farm: " + farm;
+        return "Location: " + this.location + "\n" +
+               "Box: " + this.box + "\n" +
+               "Farm: " + farm;
     }
 }

@@ -1,6 +1,6 @@
-package com.lemon;
+package com.aggregation;
 
-import com.lemon.Animal;
+import com.aggregation.Animal;
 
 public class Lion extends Animal {
 

@@ -1,7 +1,7 @@
-package com.lemon;
+package com.aggregation;
 
-import com.lemon.Animal;
-import com.lemon.Feedable;
+import com.aggregation.Animal;
+import com.aggregation.Feedable;
 
 public class Goat extends Animal implements Feedable {
 

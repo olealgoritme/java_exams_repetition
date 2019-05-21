@@ -1,8 +1,8 @@
-package com.lemon;
+package com.aggregation;
 
-import com.lemon.Stable;
-import com.lemon.Lion;
-import com.lemon.Goat;
+import com.aggregation.Stable;
+import com.aggregation.Lion;
+import com.aggregation.Goat;
 
 public class TestAnimal {
 
